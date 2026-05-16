@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RLdC Core Portal</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+    <script defer src="/static/scripts/app.js"></script>
+</head>
+<body>
+    <header class="app-bar">
+        <h1 class="app-title">RLdC Core</h1>
+        <button id="tradeButton" class="btn-primary">Scan &amp; Trade</button>
+    </header>
+
+    <main class="container">
+        <section class="positions-section">
+            <h2>Open Positions</h2>
+            <table id="positionsTable" class="positions-table">
+                <thead>
+                    <tr><th>Symbol</th><th>Qty</th><th>Entry Price</th><th>Target Exit</th><th>Order ID</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div id="noPositions" class="empty-state">No open positions.</div>
+        </section>
+    </main>
+</body>
+</html>

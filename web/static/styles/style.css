@@ -1,0 +1,122 @@
+/* RLdC Core Portal Styles */
+
+/* Root variables inspired by the original design system */
+:root {
+  --bg-dark: #0a1219;
+  --bg-darker: #060b10;
+  --card-bg: #111c26;
+  --border-color: #1e2d3d;
+  --teal-primary: #14b8a6;
+  --teal-light: #2dd4bf;
+  --teal-dark: #0f766e;
+  --orange-primary: #f59e0b;
+  --orange-light: #fbbf24;
+  --red-primary: #ef4444;
+  --green-primary: #10b981;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* App bar at top */
+.app-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--teal-primary);
+  color: var(--text-primary);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--teal-light);
+  box-shadow: 0 0 8px rgba(20, 184, 166, 0.45);
+}
+
+.btn-primary:active {
+  background-color: var(--teal-dark);
+}
+
+/* Main container */
+.container {
+  flex: 1;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Positions section */
+.positions-section {
+  margin-top: 2rem;
+}
+
+.positions-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.positions-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.positions-table th,
+.positions-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.positions-table th {
+  background-color: var(--bg-darker);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.positions-table tbody tr:hover {
+  background-color: var(--bg-darker);
+}
+
+.empty-state {
+  padding: 1rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
